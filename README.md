@@ -68,7 +68,6 @@ DISC-FinLLM是一个金融领域的大语言模型，是由面向不同金融场
 ![exam_ref_demo](./images/example_retrieval.gif)
 
 
-
 ### DISC-Fin-SFT 数据集
 DISC-FinLLM是基于我们构建的高质量金融数据集DISC-Fin-SFT在通用领域中文大模型Baichuan-13B-Chat上进行LoRA指令微调得到的金融大模型。DISC-Fin-SFT总共包含约25万条数据，分为四个子数据集，它们分别是金融咨询指令、金融任务指令、金融计算指令、检索增强指令。
 
@@ -168,6 +167,8 @@ DISC-FinLLM是基于我们构建的高质量金融数据集DISC-Fin-SFT在通用
 我们以Baichuan-13B-Chat为基座模型，混合了所有数据，在 8 * Nvidia A800 80 GB + deepspeed 的环境下进行了全量微调测试。
 
 **您可以直接从 [Hugging Face](https://huggingface.co/Go4miii/DISC-FinLLM) 上下载我们的全参模型权重。**
+
+**由于切换不同的专家模式需给模型加载不同的lora，这与为了提高用户体验的并发处理请求相冲突。所以在demo中，尽管用四个lora效果会更好，但我们最终采用训练过的全参数模型，这样才能解决并发处理下不同专家模式的冲突情况。**
 
 
 ## 推理和部署
