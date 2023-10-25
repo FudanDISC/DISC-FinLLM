@@ -7,22 +7,22 @@ ZH | [EN](./README-en.md)
 [![Generic badge](https://img.shields.io/badge/🤗-Huggingface%20Repo-green.svg)](https://huggingface.co/Go4miii/DISC-FinLLM)
 [![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](./LICENSE)
 
-[Demo](https://finllm.fudan-disc.com) | [Technical Report](https://arxiv.org/abs/2309.11325)
+[Demo](https://fin.fudan-disc.com) | [Technical Report](http://arxiv.org/abs/2310.15205)
 
 </div>
 
-DISC-FinLLM is a large model in the financial field specifically designed to provide users with professional, intelligent, and comprehensive **financial consulting services** in financial scenarios. It is developed by [Fudan University Data Intelligence and Social Computing Laboratory (Fudan-DISC)](http://fudan-disc.com) developed and open source.
+DISC-FinLLM is a large model in the financial field specifically designed to provide users with professional, intelligent, and comprehensive **financial consulting services** in financial scenarios. It is developed and open sourced by [Fudan University Data Intelligence and Social Computing Laboratory (Fudan-DISC)](http://fudan-disc.com).
 
 We will open source the following resources in this project:
 * [DISC-FinLLM-SFT training data samples](./data)
 * [DISC-FinLLM model parameters](https://huggingface.co/Go4miii/DISC-FinLLM)
 * [DISC-Fin-Eval Benchmark](./eval)
 
-You can experience our DISC-FinLLM online by visiting this [link](https://finllm.fudan-disc.com).
+You can experience our DISC-FinLLM online by visiting this [link](https://fin.fudan-disc.com).
 
 
 
-## 目录
+## Table of Contents
 
 - [Overview](#overview)
 - [Model Fine-tuning](#model-fine-tuning)
@@ -310,11 +310,13 @@ We also extend our gratitide to other contributors who have provided valuable as
 
 ## Disclaimer
 
-DISC-FinLLM has problems and shortcomings that cannot be overcome by current large language models. Although it can provide services in the financial field on many tasks and scenarios, the model should be used for user reference only and cannot replace professional financial analysts and financial experts. , we hope that users of DISC-FinLLM will evaluate the model with a critical eye. We are not responsible for any problems, risks or adverse consequences arising from the use of DISC-FinLLM.
+DISC-FinLLM has problems and shortcomings that cannot be overcome by current large language models. Although it can provide services in the financial field on many tasks and scenarios, the model should be used for user reference only and cannot replace professional financial analysts and financial experts, we hope that users of DISC-FinLLM will be able to critically evaluate the model. We are not responsible for any problems, risks or adverse consequences arising from the use of DISC-FinLLM.
 
 ## Citation
 
-If our project has been helpful for your research and work, please kindly cite our work as follows:
+Update coming soon.
+
+<!-- If our project has been helpful for your research and work, please kindly cite our work as follows:
 
 ```
 @misc{yue2023disclawllm,
@@ -325,7 +327,7 @@ If our project has been helpful for your research and work, please kindly cite o
     archivePrefix={arXiv},
     primaryClass={cs.CL}
 }
-```
+``` -->
 
 ## License
 
