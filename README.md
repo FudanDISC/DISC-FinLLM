@@ -7,7 +7,7 @@ ZH | [EN](./README-en.md)
 [![Generic badge](https://img.shields.io/badge/🤗-Huggingface%20Repo-green.svg)](https://huggingface.co/Go4miii/DISC-FinLLM)
 [![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](./LICENSE)
 
-[Demo](https://finllm.fudan-disc.com) | [技术报告](https://arxiv.org/abs/2309.11325)
+[Demo](https://fin.fudan-disc.com) | [技术报告](http://arxiv.org/abs/2310.15205)
 
 </div>
 
@@ -18,7 +18,7 @@ DISC-FinLLM 是一个专门针对金融场景下为用户提供专业、智能�
 * [DISC-FinLLM 模型参数](https://huggingface.co/Go4miii/DISC-FinLLM)
 * [DISC-Fin-Eval Benchmark](./eval)
 
-您可以通过访问这个[链接](https://finllm.fudan-disc.com)来在线体验我们的 DISC-FinLLM。
+您可以通过访问这个[链接](https://fin.fudan-disc.com)来在线体验我们的 DISC-FinLLM。
 
 
 
@@ -66,6 +66,7 @@ DISC-FinLLM是一个金融领域的大语言模型，是由面向不同金融场
 #### 金融知识检索问答
 
 ![exam_ref_demo](./images/example_retrieval.gif)
+
 
 
 ### DISC-Fin-SFT 数据集
@@ -168,8 +169,6 @@ DISC-FinLLM是基于我们构建的高质量金融数据集DISC-Fin-SFT在通用
 
 **您可以直接从 [Hugging Face](https://huggingface.co/Go4miii/DISC-FinLLM) 上下载我们的全参模型权重。**
 
-**由于切换不同的专家模式需给模型加载不同的lora，这与为了提高用户体验的并发处理请求相冲突。所以在demo中，尽管用四个lora效果会更好，但我们最终采用训练过的全参数模型，这样才能解决并发处理下不同专家模式的冲突情况。**
-
 
 ## 推理和部署
 
@@ -209,6 +208,32 @@ response = model.chat(tokenizer, messages)
 print(response)
 ```
 
+#### LoRA模型
+
+```python
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.generation.utils import GenerationConfig
+from peft import PeftModel, PeftConfig
+
+model_path = "Go4miii/DISC-FinLLM"
+model = AutoModelForCausalLM.from_pretrained(
+    model_path, torch_dtype=torch.float16, device_map="auto", trust_remote_code=True
+)
+model.generation_config = GenerationConfig.from_pretrained(model_path)
+tokenizer = AutoTokenizer.from_pretrained(
+    model_path, use_fast=False, trust_remote_code=True,
+)
+model = PeftModel.from_pretrained(model, lora_path
+)
+
+messages = [
+    {"role": "user", "content": "请解释一下什么是银行不良资产？"},
+]
+response = model.chat(tokenizer, messages)
+print(response)
+```
+
 
 ### 命令行工具
 
@@ -235,7 +260,7 @@ streamlit run web_demo.py --server.port 8888
 
 #### 金融NLP任务评测
 我们使用FinCUGE评估基准测试模型处理金融NLP任务的能力。这个评测一共包含八项任务，其中包括情感分析、关系抽取、文本摘要、文本分类、事件抽取和其他任务。我们通过提示模板将这个数据集改造为小样本（few-shot）形式，使用常用的准确度（accuracy）、F1和Rouge指标评价模型的表现，来衡量模型在金融领域中理解文本和生成相关回答的能力。评测结果（%）如下：
-|  模型   ↓  --评测集 →  | FinFE (Accuracy) | FinQA (F1) | FinCQA (F1) | FinNA (ROUGE) | FinRE (F1) | FinESE (F1) | 平均值 |
+|  模型   ↓ 评测集 →  | FinFE (Accuracy) | FinQA (F1) | FinCQA (F1) | FinNA (ROUGE) | FinRE (F1) | FinESE (F1) | 平均值 |
 |:-----------------:|:----------------:|:----------:|:-----------:|:-------------:|:----------:|:-----------:|:------:|
 | Baichuan-13B-Chat |       64.8       |    38.1    |     33.6    |      31.0     |     9.1    |     18.6    |  31.0  |
 |            (LoRA) |       69.3       |    42.4    |     42.0    |      30.9     |    10.1    |     45.3    |  40.0  |
@@ -304,7 +329,8 @@ DISC-FinLLM 有着目前大语言模型尚无法克服的问题和缺陷，尽�
 
 ## 引用
 
-如果我们的项目对您的研究和工作有帮助，请如下引用我们的项目：
+即将更新。
+<!-- 如果我们的项目对您的研究和工作有帮助，请如下引用我们的项目：
 
 ```
 @misc{yue2023disclawllm,
@@ -315,7 +341,7 @@ DISC-FinLLM 有着目前大语言模型尚无法克服的问题和缺陷，尽�
     archivePrefix={arXiv},
     primaryClass={cs.CL}
 }
-```
+``` -->
 
 ## 协议
 
