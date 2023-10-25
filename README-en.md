@@ -102,14 +102,14 @@ Financial task order data comes from two parts:
 | FPB                | Sentiment Analysis     | Sentiment Analysis        |      18690 |
 | FIQA-SA            | Sentiment Analysis     | Sentiment Analysis        |          - |
 | FNSC               | Sentiment Analysis     | Sentiment Analysis        |          - |
-| CCKS-NEC-2022      | Imformation Extraction | Causality Extraction      |       7499 |
-| SmoothNLP IEE      | Imformation Extraction | Event Extraction          |       3256 |
+| CCKS-NEC-2022      | Information Extraction | Causality Extraction      |       7499 |
+| SmoothNLP IEE      | Information Extraction | Event Extraction          |       3256 |
 | SmoothNLP NHG      | Text Generation        | Text Generation           |       4642 |
 | CCKS2022-event     | Text Classification    | Event Type Classification |       3578 |
 | Minds14            | Text Classification    | Intent Prediction         |      59143 |
-| Financial Report   | Imformation Extraction | Entity Extraction         |      61705 |
-| OpenKG             | Imformation Extraction | Entity Extraction         |       7672 |
-| OpenKG             | Imformation Extraction | Entity Extraction         |      67921 |
+| Financial Report   | Information Extraction | Entity Extraction         |      61705 |
+| OpenKG             | Information Extraction | Entity Extraction         |       7672 |
+| OpenKG             | Information Extraction | Entity Extraction         |      67921 |
 | FDDC2018           | Translation            | Terminology Translation   |        333 |
 | Wealth-alpaca-lora | Text Generation     | Keyword Generation        |      41825 |
 
