@@ -307,11 +307,11 @@ DISC-FinLLM 有着目前大语言模型尚无法克服的问题和缺陷，尽�
 如果我们的项目对您的研究和工作有帮助，请如下引用我们的项目：
 
 ```
-@misc{yue2023disclawllm,
-    title={DISC-LawLLM: Fine-tuning Large Language Models for Intelligent Legal Services}, 
-    author={Shengbin Yue and Wei Chen and Siyuan Wang and Bingxuan Li and Chenchen Shen and Shujun Liu and Yuxuan Zhou and Yao Xiao and Song Yun and Xuanjing Huang and Zhongyu Wei},
+@misc{chen2023discfinllm,
+    title={DISC-FinLLM: A Chinese Financial Large Language Model based on Multiple Experts Fine-tuning}, 
+    author={Wei Chen, Qiushi Wang, Zefei Long, Xianyin Zhang, Zhongtian Lu, Bingxuan Li, Siyuan Wang, Jiarong Xu, Xiang Bai, Xuanjing Huang, Zhongyu Wei},
     year={2023},
-    eprint={2309.11325},
+    eprint={2310.15205},
     archivePrefix={arXiv},
     primaryClass={cs.CL}
 }
