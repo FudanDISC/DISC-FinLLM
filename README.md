@@ -17,7 +17,8 @@ DISC-FinLLM 是一个专门针对金融场景下为用户提供专业、智能�
 * [DISC-FinLLM-SFT 训练数据样例](./data)
 * [DISC-FinLLM 模型参数](https://huggingface.co/Go4miii/DISC-FinLLM)
 * [DISC-Fin-Eval Benchmark](./eval)
-* DISC-FinLLM-SFT 完整训练数据（TODO）
+* DISC-FinLLM-SFT 完整训练数据（ToDo）
+* DEMO 部署代码（ToDo）
 
 您可以通过访问这个[链接](https://fin.fudan-disc.com)来在线体验我们的 DISC-FinLLM。
 
