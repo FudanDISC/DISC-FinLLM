@@ -2,7 +2,7 @@
 
 这里包含四个评测方向的评测方法。
 
-- 文件夹 eval 下包含着**金融NLP任务评测**的具体内容。
+- 文件夹 evaluator 下包含着**金融NLP任务评测**的具体内容。
 
 - 对于**人类试题评测**来说，可以点击这个链接来看[**FinEval**](https://github.com/SUFE-AIFLM-Lab/FinEval)的具体内容。
 
