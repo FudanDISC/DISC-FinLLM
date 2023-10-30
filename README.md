@@ -236,6 +236,12 @@ response = model.chat(tokenizer, messages)
 print(response)
 ```
 
+我们的四个LoRA路径，使用时将上述lora_path替换为下面路径就可以：
+lora_path=‘Go4miii/DISC-FinLLM/Baichuan-13B-Chat-lora-Task’
+lora_path=‘Go4miii/DISC-FinLLM/Baichuan-13B-Chat-lora-Consulting’
+lora_path=‘Go4miii/DISC-FinLLM/Baichuan-13B-Chat-lora-Computing’
+lora_path=‘Go4miii/DISC-FinLLM/Baichuan-13B-Chat-lora-Retrival’
+
 
 ### 命令行工具
 
